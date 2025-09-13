@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Repair Application Form</title>
+    <style>
+        /* General Body Styles to display the A4 pages */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0e0e0;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* A4 Page Styles */
+        .page {
+            background: white;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 15mm;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+            font-size: 11pt;
+            line-height: 1.5;
+        }
+
+        /* Typography */
+        h1, h2 {
+            text-align: center;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 0;
+            margin-bottom: 24pt;
+        }
+        h1 { font-size: 14pt; }
+        h2 { font-size: 12pt; }
+        p { margin: 0 0 1em 0; }
+        strong { font-weight: bold; }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .mt-20 { margin-top: 20pt; }
+        .mt-40 { margin-top: 40pt; }
+        .mb-20 { margin-bottom: 20pt; }
+
+        /* Inline input for fill-in-the-blank sections */
+        .inline-input {
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            padding: 0 2px;
+            margin: 0 4px;
+        }
+        
+        
+/* Make checkbox bigger */
+input[type="checkbox"] {
+  appearance: none;        
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #333;  
+  border-radius: 4px;      
+  cursor: pointer;
+  position: relative;
+}
+
+/* Add custom tick when checked */
+input[type="checkbox"]:checked::after {
+  content: "✔";            
+  color: black;            
+  font-size: 16px;
+  position: absolute;
+  top: -2px;
+  left: 3px;
+}
+
+
+        
+
+        /* Remove focus box */
+        input:focus, textarea:focus {
+            outline: none;
+        }
+
+        /* Form Group Layout */
+        .form-group {
+            display: flex;
+            margin-bottom: 8pt;
+        }
+        .form-group label {
+            flex: 0 0 40%;
+            padding-right: 10px;
+        }
+        .form-group .input-wrapper {
+            flex: 1;
+            border-bottom: 1px solid #333;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            border: none;
+            font-size: inherit;
+            font-family: inherit;
+            padding: 2px 0;
+            background: transparent;
+        }
+        .form-group textarea {
+             height: 4em;
+             resize: vertical;
+        }
+
+        /* Index Page List */
+        .index-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .index-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5pt;
+        }
+        .index-list .checkbox {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #000;
+            margin-left: 15px;
+        }
+
+        /* Photo/Sketch Placeholder Styles */
+        .placeholder-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .photo-placeholder {
+            width: 40mm;
+            height: 50mm;
+            border: 2px dashed #999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10pt;
+            color: #777;
+        }
+        .large-placeholder {
+            width: 100%;
+            min-height: 180mm;
+            border: 2px dashed #999;
+            margin-top: 20px;
+        }
+
+        /* Signature Blocks */
+        .signature-block {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50pt;
+        }
+        .signature-item {
+            text-align: center;
+            width: 30%;
+        }
+
+        /* Inspection Report Specific Styles */
+        .inspection-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10pt;
+        }
+        .inspection-grid .grid-item {
+             border-bottom: 1px solid #000;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body { background-color: #fff; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                border: none;
+                min-height: 290mm;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <p class="text-center">Index for documents submitted for proposed house repair of Shri/Smt.<input type="text" class="inline-input" style="width: 200px;">
+            of House No. <input type="text" class="inline-input" style="width: 180px;">
+            at <input type="text" class="inline-input" style="width: 180px;">
+            In Sy.no <input type="text" class="inline-input" style="width: 180px;">
+            of Village <input type="text" class="inline-input" style="width: 200px;">
+            Mormugao, Goa.
+        </p>
+
+        
+        
+    <ol class="index-list mt-40">
+      <li>1. Application in the prescribed format <input type="checkbox"></li>
+      <li>2. House Tax Receipt paid <input type="checkbox"></li>
+      <li>3. Form I & XIV of the land <input type="checkbox"></li>
+      <li>4. Cadastral Survey Plan/Survey Plan <input type="checkbox"></li>
+      <li>5. Photographs of the house to be repaired (3Copies) <input type="checkbox"></li>
+      <li>6. Estimate approximately Less than Rs.1 lakh <input type="checkbox"></li>
+      <li>7. Rough Sketch of plinth of the house <input type="checkbox"></li>
+      <li>8. Affidavit sworn by applicant <input type="checkbox"></li>
+      <li>9. Death Certificate of deceased Owner <input type="checkbox"></li>
+      <li>10. Other documents: Bills of Electricity, Water, etc. <input type="checkbox"></li>
+    </ol>
+
+        <p class="mt-40"><strong>Files in triplicate with all relevant documents mentioned above</strong></p>
+        <p><strong>All Xerox copies should be self attested by the applicant</strong></p>
+
+        <div class="signature-block" >
+            <div class="signature-item" style="width: auto;">
+                <p><strong>Seal</strong></p>
+            </div>
+             <div class="signature-item" style="width: auto; margin-left: 100px;">
+                <p><input type="text" class="inline-input" style="width: 70%;"></p>
+                <p><strong>V.P. Secretary</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h1>APPLICATION FOR PERMISSION FOR REPAIRS TO BUILDING</h1>
+        <p class="mb-20">Village Panchayat <input type="text" class="inline-input" style="width: 250px;">
+        Case No. - <input type="text" class="inline-input" style="width: 100px;">M/Y </p>
+        <!-- <p class="mb-20">Village Panchayat <input type="text" class="inline-input" style="width: 300px;"></p> -->
+        
+    <div class="form-group"> <label>1. Name of the applicant</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>2. Name of the Ward / Locality</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>(a) House No.</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>(b) House Tax Assessed:</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>(c) House Tax Paid:</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>(d) No. & date of receipt:</label> <div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>3. Name of the Owner / Co-owner</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>4. Description of existing house (Whether storied)</label>  <div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>5. Whether there is Electric supply / Meter, if so, since when</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>6. Whether there is water supply/ Meter, if so, since when</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>7. Specification of the material of existing house (mud, laterite stones, plastered)</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>8. Plinth area of the existing Building/house</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>9. Dimension of the existing Building / House (with sketch)</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>10. How old is the existing Building / house</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>11. Cadastral survey numbe</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>12. Title document</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>13. Photographs of existing house / building</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>14. Full particulars with dimensions of repairs to be undertaken</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>15. Specification of material to be used in repairs</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>16. Necessity to undertake repairs</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>17. Estimated cost of repairs</label><div class="input-wrapper"><input type="text"></div></div>
+    <div class="form-group"> <label>18. Approximate time required for the repairs.</label><div class="input-wrapper"><input type="text"></div></div>
+
+         <div class="signature-block">
+            <div>
+                <p>Place: <input type="text" class="inline-input" style="width: 200px;"></p> <br>
+                <p>Date: <input type="text" class="inline-input" style="width: 200px;"></p>
+                
+            </div>
+            <div>
+                 <p>Name:<input type="text" class="inline-input" style="width: 200px;"></p> <br><br>
+                 <p><strong>Signature of the applicant</strong></p>
+            </div>
+        </div>
+        <p class="mt-20"><strong>Three photos of home to be repaired</strong></p>
+        <p><strong>All copies should be self-attested by the applicant</strong></p>
+    </div>
+    
+    
+    <div class="page">
+        <p class="text-center">Photographs of proposed house to be repaired of Shri/Smt. <input type="text" class="inline-input" style="width: 250px;">
+            Bearing House No. <input type="text" class="inline-input" style="width: 150px;">
+            at <input type="text" class="inline-input" style="width: 250px;">
+            in Sy No. <input type="text" class="inline-input" style="width: 150px;">
+            of Village <input type="text" class="inline-input" style="width: 200px;">
+            in Mormugao Taluka, Goa.
+        </p>
+        
+       <div class="large-placeholder"></div>
+        <div class="text-right mt-40">
+            <p><input type="text" class="inline-input" style="width: 200px;"></p>
+            <p><strong>Name & Signature of Applicant</strong></p>
+           <p class="text-center mt-20"><strong>*Each Photo should be self-attested by the applicant (Min. 3 Photos)</strong></p>
+
+        </div>
+    </div>
+    
+    <div class="page">
+        <p class="text-center">Estimate of proposed house to be repaired of Shri/Smt.<input type="text" class="inline-input" style="width: 280px;">
+            Bearing House No. <input type="text" class="inline-input" style="width: 150px;">
+            at <input type="text" class="inline-input" style="width: 250px;">
+            In Sy No. <input type="text" class="inline-input" style="width: 150px;">
+            of Village <input type="text" class="inline-input" style="width: 200px;">
+            in Mormugao Taluka, Goa.
+        </p>
+        <div class="large-placeholder"></div>
+        <div class="text-right mt-40">
+            <p><input type="text" class="inline-input" style="width: 200px;"></p>
+            <p><strong>Name & Signature of Applicant</strong></p>
+        </div>
+    </div>
+    
+    <div class="page">
+        <p class="text-center">Rough Sketch of proposed house to be repaired of Shri/Smt.<input type="text" class="inline-input" style="width: 240px;">
+            Bearing House No. <input type="text" class="inline-input" style="width: 150px;">
+            at <input type="text" class="inline-input" style="width: 250px;">
+            in Sy No. <input type="text" class="inline-input" style="width: 150px;">
+            of Village <input type="text" class="inline-input" style="width: 200px;">
+            in Mormugao Taluka, Goa.
+        </p>
+        <div class="large-placeholder"></div>
+        <div class="text-right mt-40">
+            <p><input type="text" class="inline-input" style="width: 200px;"></p>
+            <p><strong>Name & Signature of Applicant</strong></p>
+        </div>
+    </div>
+
+    <div class="page">
+        <h1>INSPECTION REPORT</h1>
+        <p>Site of House Repair of: <input type="text" class="inline-input" style="width: 70%;"></p>
+        <p>has been inspected by the undersigned to check:</p>
+
+        <p>1) Necessity to undertake repairs: <input type="text" class="inline-input" style="width: 50%;"> </p>
+        <p>2) The existing plinth area which is as under;</p>
+        <div class="inspection-grid">
+            <div>Length: <input type="text" class="inline-input" style="width: 70%;"></div>
+            <div>Breath: <input type="text" class="inline-input" style="width: 70%;"></div>
+            <div>Height: <input type="text" class="inline-input" style="width: 70%;"></div>
+        </div>
+        <div class="inspection-grid mt-20">
+             <div>3) House Number: <input type="text" class="inline-input" style="width: 50%;"></div>
+             <div>Tax Paid: Rs<input type="text" class="inline-input" style="width: 20%;"> for the year <input type="text" class="inline-input" style="width: 20%;"></div>
+        </div>
+        <p>4) Cadastral Survey No: <input type="text" class="inline-input" style="width: 70%;"></p>
+        <p>5) Photographs have been produced for the existing Plinth area by the applicant.</p>
+
+        <p class="mt-20">Report of the site inspection dated <input type="text" class="inline-input"> has been placed hereunder. The undersigned Inspected the site on <input type="text" class="inline-input">.</p>
+        <p>The approval for repair of the above construction work may be granted subject to the following:</p>
+
+        <ol type="a" style="padding-left: 20px;">
+            <li>Title documents/ownership of the house and property as on, as well has house tax, light tax should be verified by Village Panchayat Secretary before Issue of permission for repair. Further, NOC of landowner should be obtained before Issue of NOC for repair.</li>
+            <li>If the structure is within CRZ limit, then GCZMA Goa Coastal Zone Management Authority and other Government permission for repair should be obtained by the Village Panchayat.</li>
+            <li>Repairs should be carried out as per the conditions imposed in the circular dated 6/09/2002 issued by the Director of Panchayats, Panaji-Goa.</li>
+            <li>Repair permission is only for the existing Plinth area shown on the sketch drawn by Extension Officer Rural Engineer (E.O.R.E.) of the Block Development Officer.</li>
+            <li>R.C.C. is not allowed in this repair Permission.</li>
+        </ol>
+
+        <div class="signature-block">
+            <div class="signature-item"><p><input type="text" class="inline-input" style="width: 70%;">br><strong>Signature and Name of<br>V.P. Secretary</strong></p></div>
+            <div class="signature-item"><p><input type="text" class="inline-input" style="width: 70%;"><br><strong>Signature and Name of<br>Ε.Ο. (V.P)</strong></p></div>
+            <div class="signature-item"><p><input type="text" class="inline-input" style="width: 70%;"><br><strong>Signature and Name of<br>Ε.Ο. (R.E)</strong></p></div>
+        </div>
+        <p>__________________________________________________________________________________</p>
+        
+        <p class="mt-40">The Village Panchayat has resolved in the meeting held on <input type="text" class="inline-input"> to grant / reject the permission as requested for vide resolution no. <input type="text" class="inline-input"></p>
+        <p>The applicant or completion of the repairs should intimate to the Village Panchayat in writing in the fortnight that repairs have been carried out as per the permission granted on <input type="text" class="inline-input"></p>
+
+        <div class="signature-block">
+            <div>
+                <p>Office Seal:<input type="text" class="inline-input" style="width: 50%;"></p>
+                <p>Date:<input type="text" class="inline-input" style="width: 70%;"></p>
+                <p>Place:<input type="text" class="inline-input" style="width: 70%;"></p>
+            </div>
+            <div class="signature-item" style="width: auto;">
+                 <p><input type="text" class="inline-input" style="width: 70%;"><br><strong>SARPANCH</strong></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

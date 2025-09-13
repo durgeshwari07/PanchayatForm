@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divergence Certificate Application</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #e0e0e0;
+      color: #000;
+      margin: 0;
+      padding: 20px;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .page {
+      background: white;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      padding: 2cm;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 12pt;
+      line-height: 1.6;
+      box-sizing: border-box;
+    }
+
+    .divergence-header { margin-bottom: 20px; }
+    .main-title {
+      text-decoration: underline;
+      font-weight: bold;
+      font-size: 16pt;
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+    .second-line {
+      display: flex;
+      align-items: center;
+    }
+
+    h1, h2, h3 {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 24pt;
+    }
+    h1 { font-size: 16pt; text-decoration: underline; }
+    h2 { font-size: 14pt; text-decoration: underline; }
+    h3 { font-size: 13pt; text-align: left; }
+    p { margin: 0 0 1em 0; }
+
+    /* Underline style input */
+    .inline-input {
+      border: none;
+      border-bottom: 1px solid #000;
+      background: transparent;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0 2px;
+      margin: 0 4px;
+    }
+    .inline-input:focus {
+      outline: none;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10pt;
+    }
+    .form-group label {
+      flex: 0 0 200px;
+      padding-right: 15px;
+    }
+    .form-group input[type="text"] {
+      flex: 1;
+      padding: 4pt 2pt;
+      border: none;
+      border-bottom: 1px solid #000;
+      font-size: 12pt;
+      font-family: inherit;
+      background: transparent;
+    }
+    .form-group input[type="text"]:focus {
+      outline: none;
+    }
+
+    .signature-area {
+      margin-top: 40pt;
+      text-align: right;
+    }
+
+    .photo-box {
+      width: 100px;
+      height: 125px;
+      border: 2px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .second-title {
+      font-weight: bold;
+      font-size: 16pt;
+      margin-left: 20px;
+    }
+
+    .footer-block {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50pt;
+    }
+
+    @media print {
+      body { background-color: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border: none;
+        page-break-after: always;
+      }
+      .page:last-child { page-break-after: auto; }
+    }
+  </style>
+</head>
+<body>
+    <!-- Page 1 of Divergence Form -->
+    <div class="page">
+        <h1>FORM OF APPLICATION FOR ISSUE OF DIVERGENCE CERTIFICATE</h1>
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Details address:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Father's Name:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Date & Place of Birth:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>His/Her Profession/Occupation:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Weather married/unmarried:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>If married, Wife's/Husband's Name:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Name as per birth certificate, School leaving Certificate etc., or other documents:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Name as mentioned in any other documents or as the person is known:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Documentary evidence relating to the divergence certificate required:</label>
+            <input type="text">
+        </div>
+        <div class="form-group">
+            <label>Purpose for which the certificate is required:</label>
+            <input type="text">
+        </div>
+        <div class="signature-area">
+            <p>_________________________</p>
+            <p><strong>Signature of the Applicant</strong></p>
+        </div>
+        <div style="margin-top: 30pt;">
+            <h3>This application should be supported by the following documents:</h3>
+            <ol style="padding-left: 20px;">
+                <li>Birth Certificate.</li>
+                <li>School leaving Certificate.</li>
+                <li>Ration Card.</li>
+                <li>Affidavit.</li>
+                <li>Any other documents relevant to the matter.</li>
+            </ol>
+        </div>
+    </div>
+
+<!-- Divergence Form Header -->
+<div class="page">
+  <div class="divergence-header">
+    <h2 class="main-title">FOR DIVERGENCE</h2>
+    <div class="second-line">
+      <div class="photo-box">PHOTO</div>
+      <h2 class="second-title">DIVERGENCE</h2>
+    </div>
+  </div>
+
+
+        <p>I, the undersigned <input type="text" class="inline-input" style="width: 250px;">, son/daughter/wife of <input type="text" class="inline-input" style="width: 250px;">, Indian National, Single/Married/Widow/Widower/Divorcee, major in age/<input type="text" class="inline-input" style="width: 60px;"> years, resident of <input type="text" class="inline-input" style="width: 400px;"> in Taluka <input type="text" class="inline-input"> District <input type="text" class="inline-input"> State of Goa do hereby solemnly affirm and state/declare as under:</p>
+        <ol style="padding-left: 20px;">
+            <li>I say that I am permanent resident of above mentioned address.</li>
+            <li>I say that on my Birth Certificate my name is recorded as <input type="text" class="inline-input" style="width: 95%;"></li>
+            <li>I say that on my Bonafied Certificates my name is recorded as <input type="text" class="inline-input" style="width: 95%;"></li>
+            <li>I say that on my School Leaving Certificates my name is recorded as <input type="text" class="inline-input" style="width: 95%;"></li>
+            <li>I say that on my School/ College Mark-sheets my name is recorded as <input type="text" class="inline-input" style="width: 95%;"></li>
+            <li>I say that on my Marriage Certificate my name is recorded as <input type="text" class="inline-input" style="width: 95%;"></li>
+            <li>I say that I am one and the same person having names as <input type="text" class="inline-input" style="width: 280px;"> and <input type="text" class="inline-input" style="width: 280px;"> who is myself.</li>
+            <li>I say that I am swearing this declaration in order to produce the same in the office of the Mamlatdar of <input type="text" class="inline-input"> Taluka, Goa, for obtaining Divergence Certificate which is required to produce before Competent Authorities.</li>
+            <li><input type="text" class="inline-input" style="width: 95%;"></li>
+            <li><input type="text" class="inline-input" style="width: 95%;"></li>
+            <li>I say that the contents of above paras of my declaration are true to the best of my knowledge and belief and that I have not misrepresented any facts.</li>
+        </ol>
+        <div class="footer-block">
+            <div>
+                <p>Place: <input type="text" class="inline-input"></p>
+                <p>Date:<input type="text" class="inline-input"></p><br>
+                <p>Identified by:</p>
+            </div>
+            <div style="align-self: flex-end;"><strong>DEPONENT</strong></div>
+        </div>
+    </div>
+</body>
+</html>
