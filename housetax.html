@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Form House Tax</title>
+    <style>
+        /* --- Basic Page Styles --- */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16px;
+            line-height: 1.8;
+            background-color: #f0f0f0; /* Light gray background */
+            display: flex;
+            flex-direction: column; /* Stack pages vertically */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* --- Letter Container as A4 page --- */
+        .letter-container {
+            background-color: #ffffff;
+            width: 210mm;      /* A4 width */
+            min-height: 297mm;  /* A4 height */
+            padding: 25mm;      /* A4 margin-like padding */
+            border: 1px solid #dcdcdc;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        /* --- Header Section (To/From) --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            min-height: 180px;
+        }
+
+        .recipient p {
+            margin: 0;
+        }
+
+        .sender-info p {
+            margin: 6px 0;
+        }
+        
+        .from-address-lines p {
+            margin: 6px 0 6px 50px;
+        }
+        
+        .from-label {
+             margin-bottom: -4px !important;
+        }
+
+        /* --- Subject and Salutation --- */
+        .subject {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .salutation {
+            margin-top: 30px;
+        }
+        
+        /* --- Editable Underline Input --- */
+        .fill-in-blank {
+            border: none;
+            border-bottom: 1px solid #333;
+            background: transparent;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            padding: 0 2px;
+            margin: 0 2px;
+        }
+
+        /* --- Closing and Signature --- */
+        .closing p {
+            margin: 10px 0;
+        }
+
+        .signature {
+            margin-top: 80px; /* Space for handwritten signature */
+        }
+        
+        .signature p {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* --- STYLES FOR SECOND PAGE --- */
+        .page-2 {
+            margin-top: 20px; /* Space between pages on screen */
+        }
+        .page-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 30px;
+            text-decoration: underline;
+        }
+        .declaration-list {
+            padding-left: 25px;
+            list-style-type: decimal;
+        }
+        .declaration-list li {
+            margin-bottom: 15px;
+        }
+        .closing-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            min-height: 160px;
+        }
+        .closing-section p {
+            margin: 5px 0;
+        }
+        .photo-box {
+            width: 120px;
+            height: 150px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            text-align: center;
+        }
+        .deponent {
+            font-weight: bold;
+        }
+
+        /* --- Print Settings --- */
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+                display: block;
+            }
+            .letter-container {
+                box-shadow: none;
+                border: none;
+                margin: 0;
+                width: 100%;
+                min-height: 297mm;
+                padding: 25mm;
+            }
+            .page-2 {
+                margin-top: 0;
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="letter-container">
+    
+        <div class="header">
+            <div class="recipient"></div> 
+            <div class="sender-info">
+                <p>CONTACT NO. <input type="text" class="fill-in-blank" style="width: 180px;"></p>
+                <p class="from-label">From:</p>
+                <div class="from-address-lines">
+                    <p><input type="text" class="fill-in-blank" style="width: 260px;"></p>
+                    <p><input type="text" class="fill-in-blank" style="width: 260px;"></p>
+                    <p><input type="text" class="fill-in-blank" style="width: 260px;"></p>
+                </div>
+                <p>DATE: <input type="text" class="fill-in-blank" style="width: 220px;"></p>
+            </div>
+        </div>
+
+        <p>To,</p>
+        <p>The Sarpanch,</p>
+
+        <div class="subject">
+           
+            <div style="margin-left: 50px; font-weight: bold;">
+    <p>
+        Sub: Transfer of House Tax Bearing H.No. 
+        <input type="text" class="fill-in-blank" style="width: 200px;">, at 
+        <input type="text" class="fill-in-blank" style="width: 150px;">, under V.P. 
+        <input type="text" class="fill-in-blank" style="width: 150px;"> Goa.
+    </p>
+</div>
+        </div>
+
+        <div class="salutation">
+            <p>Madam/Sir,</p>
+        </div>
+        
+        <div class="letter-body">
+            <p>
+                We / I the undersigned, Shri/Smt/Miss. <input type="text" class="fill-in-blank" style="width: 300px;">
+                <input type="text" class="fill-in-blank" style="width: 50%;">
+                R/o the above address would kindly request you 
+                to please transfer my / our house / flat / bungalow / duplex / villa /shop tax bearing H.No.
+                <input type="text" class="fill-in-blank" style="width: 180px;">, at <input type="text" class="fill-in-blank" style="width: 250px;">, under V.P.
+                <input type="text" class="fill-in-blank" style="width: 30%;"> Goa, from the name/names of <input type="text" class="fill-in-blank" style="width: 30%;"> <input type="text" class="fill-in-blank" style="width: 80%;"> to my / our 
+                name/name's i.e <input type="text" class="fill-in-blank" style="width: 480px;"><input type="text" class="fill-in-blank" style="width: 480px;">.
+            </p>
+            <p>
+                We/I, hereby enclose, Deed of sale /Agreement of Sale/gift deed (Notarized)/ Affidavit cum NOC from the owner (Original)/ Legal heirs (Original), garbage declaration /Self-attested copy of Aadhar card / Self-attested copy of Death Certificate/ Self-attested copy of marriage certificate/ Self-attested copy of house tax receipt/Power of Attorney (Notarized), for your reference.
+            </p>
+        </div>
+
+        <div class="closing">
+            <p>Hope you do the Needful.</p>
+            <p>Thanking You,</p>
+            <p>Your's Faithfully,</p>
+
+            <div class="signature">
+                <p><input type="text" class="fill-in-blank" style="width: 250px;"></p>
+                <p>Name & Signature</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="letter-container page-2">
+
+        <h2 class="page-title">SELF DECLARATION</h2>
+
+        <p>
+            I the undersigned <input type="text" class="fill-in-blank" style="width: 70%;"> w/d/ of
+            <input type="text" class="fill-in-blank" style="width: 50%;">,
+            and, major in age, Indian National, R/o
+            <input type="text" class="fill-in-blank" style="width: 70%;"> do hereby state on oath
+            solemn affirmation as under:
+        </p>
+
+        <ol class="declaration-list">
+            <li>I say that I have applied for Transfer of house tax bearing H. No.
+                <input type="text" class="fill-in-blank" style="width: 150px;"> at <input type="text" class="fill-in-blank" style="width: 200px;"> Goa as the same is purchased
+                by me vide Deed of Sale / Gift Deed Ref. No. <input type="text" class="fill-in-blank" style="width: 200px;">
+                dated <input type="text" class="fill-in-blank" style="width: 140px;">.
+            </li>
+            <li>I say that we have / do not have our own system / means of treating the garbage at the Society
+                Level / Building premises.
+            </li>
+            <li>I say that I will segregate the garbage arising out of my Flat/House/Shop at source and dispose
+                the <u>wet garbage</u> as per the arrangement made by me/owner at my location at my own cost.
+            </li>
+            <li>I say that I am well aware that the Panchayat is collecting <u>dry garbage</u> from the households in its
+                jurisdiction and therefore I shall handover segregated dry garbage to the Panchayat as per the date
+                specified by the Panchayat and if required, I shall make arrangement at my own cost to hand over
+                the Garbage to the Panchayat. I further state that, any type of garbage will not be disposed /
+                littered by me in the jurisdiction of V.P. <input type="text" class="fill-in-blank" style="width: 250px;"> nor any other jurisdiction other
+                than <input type="text" class="fill-in-blank" style="width: 300px;"> specially at the places marked as “No Garbage Dumping”. If found
+                guilty than I undertake to pay the fines as applicable.
+            </li>
+            <li>I say that I am well aware of the consequences for the default under Solid Waste Management
+                Rules, 2016. Also, the Panchayat may revert the tax to its original records in case of any dispute.
+            </li>
+            <li>I say that this Affidavit / Declaration is sworn by me in order to produce to the Sarpanch, Village
+                Panchayat of <input type="text" class="fill-in-blank" style="width: 300px;"> Goa for Transfer of house tax bearing
+                H. No. <input type="text" class="fill-in-blank" style="width: 150px;"> at <input type="text" class="fill-in-blank" style="width: 100px;"> from the name of
+                <input type="text" class="fill-in-blank" style="width: 85%;"> to my name
+                i.e. <input type="text" class="fill-in-blank" style="width: 85%;">.
+            </li>
+            <li>I verify that the content of the above paras are true to the best of our knowledge and belief.</li>
+        </ol>
+
+        <p>
+            I hereby confirm that what has been stated above is true and correct to the best of my knowledge, and
+            nothing has been concealed therefrom. That, I agree to the automatic nullification of my request for
+            consent/authorization/registration of my unit. I hold myself liable for perjury, Falsehood,
+            misrepresentation and/or omission and for falsification or act of dishonesty for any Fraudulent, fake or
+            tampered documents that have been submitted.
+        </p>
+
+        <div class="closing-section">
+            <div class="place-date">
+                <p>PLACE: <input type="text" class="fill-in-blank" style="width: 150px;"></p>
+                <p>DATE: <input type="text" class="fill-in-blank" style="width: 165px;"></p>
+            </div>
+            <div class="photo-box">
+                <span>Affix photo</span>
+                <span>With across</span>
+            </div>
+            <div class="deponent">
+                <p>DEPONENT.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

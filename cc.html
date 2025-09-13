@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Certificate - Half Page A4 Layout</title>
+    <style>
+        /* Sets up the gray background to highlight the white page */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            background-color: #e9e9e9;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        /* The main container styled to look like an A4 page */
+        .certificate-container {
+            background-color: #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            /* A4 Dimensions are maintained */
+            width: 21cm;
+            min-height: 29.7cm;
+            /* Page margins */
+            padding: 2cm 2.5cm; 
+            box-sizing: border-box;
+        }
+
+        /* Certificate Heading */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        /* Container for the main text to control spacing */
+        .certificate-body {
+            font-size: 14pt;
+            line-height: 1.8;
+        }
+
+        /* Individual paragraphs to enforce line breaks from the PDF */
+        .certificate-body p {
+            margin: 0 0 10px 0;
+        }
+        
+        /* Spacer class for adding extra vertical space */
+        .spacer {
+            margin-top: 25px !important;
+        }
+
+        /* Styling for the blank input fields */
+        .fill-in {
+            border: none;
+            border-bottom: 1px dotted #333;
+            background-color: transparent;
+            outline: none;
+            font-family: inherit;
+            font-size: 13pt;
+            padding-bottom: 2px;
+        }
+        
+        /* Precise widths for input fields */
+        .fill-in.name { width: 320px; }
+        .fill-in.guardian { width: 350px; }
+        .fill-in.numeric { width: 80px; text-align: center; }
+        .fill-in.name-repeat { width: 450px; }
+        .fill-in.place, .fill-in.date { width: 200px; }
+
+        /* Footer section for Place/Date and Signature */
+        .footer-details {
+            display: flex;
+            justify-content: space-between;
+            /* MODIFICATION: Changed 'margin-top: auto' to a fixed value. */
+            /* This stops the footer from being pushed to the bottom of the page. */
+            margin-top: 80px; 
+            font-size: 14pt;
+        }
+
+        .footer-details p {
+            margin: 10px 0;
+        }
+        
+        .right {
+            text-align: left;
+        }
+
+        /* Final wish at the bottom of the content block */
+        .wish {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14pt;
+            font-style: italic;
+        }
+        
+        /* ----------------- PRINT STYLES ----------------- */
+        @media print {
+            @page {
+                size: A4;
+                margin: 2cm;
+            }
+
+            body {
+                background-color: #fff;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .certificate-container {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                min-height: 27.7cm; /* Adjust height for print margins */
+                padding: 0;
+            }
+            
+            .fill-in {
+                border-bottom: 1px dotted #000;
+            }
+
+            .footer-details {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="certificate-container">
+        <h1>CHARACTER CERTIFICATE </h1>
+
+        <div class="certificate-body">
+            <p>Certified that Mr/Ms. <input type="text" class="fill-in name" aria-label="Applicant's name"> son/daughter/wife of Shri <input type="text" class="fill-in guardian" aria-label="Guardian's name"> is well known to me since last <input type="number" class="fill-in numeric" aria-label="Number of years"> years and <input type="number" class="fill-in numeric" aria-label="Number of months"> months. </p>
+            
+            <p class="spacer">To the best of my knowledge and belief he/she bears a good moral character and has nothing which debars his/her suitability for Government Job. </p>
+
+            <p class="spacer">Mr/Ms. <input type="text" class="fill-in name-repeat" aria-label="Applicant's name again"> is not related to me.</p>
+        </div>
+        
+        <div class="footer-details">
+            <div class="left">
+                 <p>Place: <input type="text" class="fill-in place" aria-label="Place"></p> 
+                <p>Dated: <input type="date" class="fill-in date" aria-label="Date"></p> 
+            </div>
+            <div class="right">
+                <p>Signature</p> 
+                 <p>Designation</p> 
+            </div>
+        
+
+</body>
+</html>

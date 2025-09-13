@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application for Alteration Permission</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      background-color: #e0e0e0;
+      color: #000;
+      margin: 0;
+      padding: 20px;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .page {
+      background: white;
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      padding: 2cm;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-size: 12pt;
+      line-height: 1.6;
+      box-sizing: border-box;
+    }
+
+    h1, h2 {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 24pt;
+    }
+    h1 { font-size: 14pt; text-transform: uppercase; }
+    h2 { font-size: 12pt; font-weight: normal; margin-top: -20pt; }
+    h3 { font-size: 12pt; font-weight: bold; text-align: left; margin-top: 40px;}
+
+    p { margin: 0 0 1em 0; }
+
+    /* Underline style for inputs within text */
+    .inline-input {
+      border: none;
+      border-bottom: 1px solid #000;
+      background: transparent;
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0 2px;
+      margin: 0 4px;
+    }
+    .inline-input:focus {
+      outline: none;
+    }
+
+    /* Flexbox layout for label + input */
+    .form-group {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 12pt;
+      width: 100%;
+    }
+    .form-group label {
+      flex: 0 0 320px; /* Increased width for longer labels */
+      padding-right: 15px;
+      box-sizing: border-box;
+    }
+    .form-group .input-wrapper {
+        flex: 1;
+    }
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 2pt 2pt;
+      border: none;
+      border-bottom: 1px solid #000;
+      font-size: 12pt;
+      font-family: inherit;
+      background: transparent;
+      box-sizing: border-box;
+    }
+    
+    /* MODIFIED TEXTAREA STYLE */
+    .form-group textarea {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #000;
+        font-size: 12pt;
+        font-family: inherit;
+        box-sizing: border-box;
+        min-height: 80px;
+        resize: vertical;
+        /* --- Lines added here --- */
+        line-height: 1.6em;
+        background-image: linear-gradient(to bottom, #ccc 1px, transparent 1px);
+        background-size: 100% 1.6em;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group textarea:focus {
+      outline: none;
+    }
+
+    /* Special layout for textareas where label is on top */
+    .form-group.stacked {
+        display: block;
+    }
+    .form-group.stacked label {
+        margin-bottom: 8px;
+    }
+
+    .footer-block {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50pt;
+    }
+
+    .oath-statement {
+      margin-top: 40pt;
+    }
+    
+    .signature-area {
+        text-align: left;
+    }
+    .signature-area .line {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #000;
+        width: 250px;
+    }
+
+    @media print {
+      body { background-color: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+   <h1 style="text-decoration: underline;">
+    Application for Alteration Permission of Structure
+    Consisting of single dwelling unit constructed/existed prior to the commencement of The Goa Panchayat Raj Act, 1994.
+</h1>
+    <p style="margin-top: 40px;">
+      To,<br>
+      The Sarpanch/Secretary,<br>
+      Village Panchayat <input type="text" class="inline-input" style="width: 300px;"><br>
+      Taluka <input type="text" class="inline-input" style="width: 300px;">
+    </p>
+
+    <div class="form-group stacked" style="margin-top: 30px;">
+      <label for="applicant_name">1) Name and address of Applicant:-</label>
+       <div class="input-wrapper"><input type="text" id="ward_name" name="ward_name"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="ward_name">2 a) Name and number of the ward:-</label>
+      <div class="input-wrapper"><input type="text" id="ward_name" name="ward_name"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="house_no">b) House :-</label>
+      <div class="input-wrapper"><input type="text" id="house_no" name="house_no"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="tax_assessed">c) Whether house tax assessed:-</label>
+      <div class="input-wrapper"><input type="text" id="tax_assessed" name="tax_assessed"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="tax_receipt">d) Latest House tax paid/Receipt No. & date:-</label>
+      <div class="input-wrapper"><input type="text" id="tax_receipt" name="tax_receipt"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="owner_name">3) Name of the owner:-</label>
+      <div class="input-wrapper"><input type="text" id="owner_name" name="owner_name"></div>
+    </div>
+
+    <div class="form-group stacked">
+      <label for="house_description">4) Description of existing house (type of structure, whether laterite masonry with Roofing type, etc.):-</label>
+     <div class="input-wrapper"><input type="text" id="ward_name" name="ward_name"></div>
+    </div>
+    
+    <div class="form-group">
+      <label for="electricity">5) Whether there is an electricity connection to the structure, if so, since when( enclose copy of latest electricity bill):-</label>
+      <div class="input-wrapper"><input type="text" id="electricity" name="electricity"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="water">6) Whether there is water connection to the structure, if so, since when ( enclose copy of latest water bill):-</label>
+      <div class="input-wrapper"><input type="text" id="water" name="water"></div>
+    </div>
+    
+    <div class="form-group stacked">
+      <label for="material_spec">7) Specification of the material of the existing house (whether it is of mud, laterite stone, plastered etc):-</label>
+       <div class="input-wrapper"><input type="text" id="ward_name" name="ward_name"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="plinth_area">8) Plinth area of the existing building/house in sq.mts :-</label>
+        <div class="input-wrapper"><input type="text" id="plinth_area" name="plinth_area"></div>
+    </div>
+
+    <div class="form-group stacked">
+        <label for="dimensions">9) Dimensions of the existing structure (also enclose plan prepared by structural engineer):-</label>
+        <div class="input-wrapper"><input type="text" id="ward_name" name="ward_name"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="existence_date">10) Since when the house/building is existing (mention month and year)</label>
+        <div class="input-wrapper"><input type="text" id="existence_date" name="existence_date"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="survey_no">11) Survey Number/Sub-Division Number and Revenue Village (enclose latest survey plan):-</label>
+        <div class="input-wrapper"><input type="text" id="survey_no" name="survey_no"></div>
+    </div>
+    
+    <div class="form-group">
+        <label for="title_docs">12) Title documents (s):-</label>
+        <div class="input-wrapper"><input type="text" id="title_docs" name="title_docs"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="photos">13) Photographs of the existing structure:- (enclose front side photograph and both side photographs showing overall picture of structure)</label>
+        <div class="input-wrapper"><input type="text" id="photos" name="photos" value="" readonly></div>
+    </div>
+
+    <div class="form-group">
+        <label for="alteration_scope">14) Whether alteration is to be carried out for part of the house or entire building:-</label>
+        <div class="input-wrapper"><input type="text" id="alteration_scope" name="alteration_scope"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="alteration_material">15) Material to be used in alteration of structure-</label>
+        <div class="input-wrapper"><input type="text" id="alteration_material" name="alteration_material"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="necessity">16) Necessity to undertake alteration:-</label>
+        <div class="input-wrapper"><input type="text" id="necessity" name="necessity"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="estimated_cost">17) Estimated cost of alteration:-</label>
+        <div class="input-wrapper"><input type="text" id="estimated_cost" name="estimated_cost"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="time_required">18) Approximate time required for the alteration:-</label>
+        <div class="input-wrapper"><input type="text" id="time_required" name="time_required"></div>
+    </div>
+
+    <p class="oath-statement">
+      I State on oath that above particulars are correct and true to the best of my knowledge and belief and I have not concealed/misrepresented any facts.
+    </p>
+
+    <div class="footer-block">
+        <div>
+            <p>Place:-</p>
+            <p>Dated:-</p>
+        </div>
+        <div class="signature-area">
+            <div class="line"></div>
+            <p>Signature</p>
+            <p>Name of applicant</p>
+        </div>
+    </div>
+    
+    <div class="enclosures">
+        <h3>Enclosed:-</h3>
+        <ol style="padding-left: 20px;">
+            <li>Latest Form I & XIV</li>
+            <li>Latest Survey Plan</li>
+            <li>House Tax Receipt (latest as well as prior to commencement of Goa Panchayat Raj Act 1994)</li>
+            <li>Recent Photographs of the Structure</li>
+            <li>Plan and certificate of stability of structure issued by Registered Structural Engineer</li>
+        </ol>
+    </div>
+  </div>
+</body>
+</html>
