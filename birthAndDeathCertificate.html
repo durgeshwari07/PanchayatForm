@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Application for Birth / Death Certificate</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      .page {
+        border: 2px solid #000;
+        padding: 40px;
+        max-width: 850px;
+        margin: 30px auto;
+        background: #fff;
+        line-height: 1.6;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: underline;
+        margin: 20px 0;
+      }
+      .office-use {
+        font-style: italic;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: center;
+      }
+      input[type="text"],
+      input[type="date"],
+      input[type="number"] {
+        border: none;
+        border-bottom: 1px solid #000;
+        padding: 2px;
+        min-width: 100px;
+        display: inline-block;
+      }
+
+      .Subject {
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+      }
+      hr.arrow-line {
+        border: none;
+        border-top: 1px solid #000;
+        position: relative;
+        margin: 10px 0 20px;
+      }
+      hr.arrow-line::before,
+      hr.arrow-line::after {
+        content: "➝";
+        position: absolute;
+        top: -10px;
+        font-size: 14px;
+      }
+      hr.arrow-line::before {
+        left: 0;
+      }
+      hr.arrow-line::after {
+        right: 0;
+        transform: scaleX(-1);
+      }
+      .clearfix {
+        clear: both;
+      }
+      .left {
+        float: left;
+      }
+      .right {
+        float: right;
+      }
+      .signature {
+        text-align: right;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <p class="office-use">For office use only:</p>
+      <p>
+        Paid Rs. <input type="text" style="width: 120px" /> Date
+        <input type="date" style="width: 150px" />
+      </p>
+      <p>
+        Remarks of dealing clerk with initials
+        <input type="text" style="width: 400px" />
+      </p>
+      <hr class="arrow-line" />
+
+      <h1>APPLICATION FOR BIRTH / DEATH CERTIFICATE</h1>
+
+      <div class="left">
+        Cont. No: <input type="text" style="width: 150px" />&nbsp;&nbsp;&nbsp;
+        Date: <input type="date" style="width: 150px" />
+      </div>
+      <div class="right">
+        Applicant Name: <input type="text" style="width: 200px" /><br />
+        Address: H.No: <input type="text" style="width: 200px" />
+      </div>
+      <div class="clearfix"></div>
+      <br />
+
+      <p>
+        To,<br />
+        The Registrar of Births & Deaths,<br />
+        V.P. Chicalim Goa.<br /><br />
+        Number of Copies: <input type="number" style="width: 80px" />
+      </p>
+
+      <p class="Subject">
+        <strong><u>Sub: Request to issue Birth / Death Certificate.</u></strong>
+      </p>
+
+      <p>Sir / Madam,</p>
+      <p>
+        It is kindly requested to issue Birth / Death certificate, of the person
+        whose details are furnished below:-
+      </p>
+
+      <p>1. Name: <input type="text" style="width: 400px" /></p>
+      <p>2. Father’s Name: <input type="text" style="width: 400px" /></p>
+      <p>3. Mother’s Name: <input type="text" style="width: 400px" /></p>
+      <p>
+        4. Date of Birth / Death:
+        <input type="date" style="width: 180px" /> Registration No:
+        <input type="text" style="width: 200px" />
+      </p>
+      <p>
+        5. Place of Birth / Death Registered at:
+        <input type="text" style="width: 400px" />
+      </p>
+
+      <div class="signature">
+        Yours faithfully<br /><br />
+        Name & Signature: <input type="text" style="width: 250px" />
+      </div>
+    </div>
+  </body>
+</html>

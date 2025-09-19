@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application & Self Declaration Form</title>
+    <style>
+      body {
+        background-color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        border: 2px solid black;
+        box-sizing: border-box;
+        padding: 20mm;
+        margin-bottom: 20mm;
+      }
+      h2 {
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 20px;
+      }
+      .right-section {
+        text-align: right;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .right-section label {
+        display: inline-block;
+        width: 100px;
+        text-align: left;
+      }
+      .right-section input {
+        width: 250px;
+        margin-bottom: 8px;
+      }
+      .main-content {
+        margin-top: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: left;
+      }
+      table input {
+        width: 95%;
+        border: none;
+        outline: none;
+      }
+      .signature {
+        text-align: right;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+
+      /* Styles for Self Declaration Form */
+      .declaration-page {
+        padding: 25px 30px;
+        line-height: 1.6;
+      }
+      .header {
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      .photo-box {
+        border: 1px solid black;
+        width: 120px;
+        height: 120px;
+        text-align: center;
+        float: left;
+        margin-right: 15px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .form-section {
+        clear: both;
+        margin-top: 15px;
+        font-size: 14px;
+      }
+      input[type="text"] {
+        border: none;
+        border-bottom: 1px solid black;
+        min-width: 80px;
+      }
+      .signature-line {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        padding-top: 10px;
+      }
+      .right-signature {
+        text-align: right;
+        max-width: 50%;
+      }
+      .report-section {
+        margin-top: 40px;
+      }
+      .two-column {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 15px;
+        gap: 20px;
+      }
+      .witness-section {
+        margin-top: 25px;
+      }
+      .witness-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 20px;
+      }
+      .applicant-signature {
+        text-align: right;
+        margin-top: 50px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PAGE 1: APPLICATION FOR INCOME CERTIFICATE -->
+    <div class="page">
+      <h2>APPLICATION FOR INCOME CERTIFICATE</h2>
+
+      <div class="right-section">
+        <div><label>From:</label> <input type="text" /></div>
+        <div><label>Address:</label> <input type="text" /></div>
+        <div><label>Date:</label> <input type="text" /></div>
+        <div><label>Contact No:</label> <input type="text" /></div>
+      </div>
+
+      <div class="main-content">
+        <p>
+          To,<br />
+          The Sarpanch / Secretary,<br />
+          V.P Chicalim,<br />
+          Chicalim Goa
+        </p>
+
+        <p>Sir,</p>
+
+        <p>
+          This is to request you to issue me Income Certificate, as per my below
+          mentioned details which are true and best of my Knowledge and belief:-
+        </p>
+
+        <p>
+          1. Name and Address of the applicant:<br /><input
+            type="text"
+            style="width: 100%"
+          />
+        </p>
+        <p>
+          2. Date and place of birth:<br /><input
+            type="text"
+            style="width: 100%"
+          />
+        </p>
+        <p>
+          3. Profession / Occupation:<br /><input
+            type="text"
+            style="width: 100%"
+          />
+        </p>
+        <p>
+          4. a) Do you/ your wife/ Husband have any immoveable property, if so
+          give Description and Value and income derived from the same:<br /><input
+            type="text"
+            style="width: 100%"
+          />
+        </p>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;b) Any other source of income such as interest
+          on bank deposit etc if so indicate the same:<br /><input
+            type="text"
+            style="width: 100%"
+          />
+        </p>
+        <p>
+          5. Purpose of income certificate required:<br /><input
+            type="text"
+            style="width: 100%"
+          />
+        </p>
+        <p>
+          6. Did you applied for income certificate earlier? If so when:<br /><input
+            type="text"
+            style="width: 100%"
+          />
+        </p>
+
+        <p>
+          7. Details of relationship, professional, age income of family member
+          as per ration card.<br />(Including Head of applicant)
+        </p>
+
+        <table>
+          <tr>
+            <th style="width: 10%">Sr. No.</th>
+            <th style="width: 25%">Names</th>
+            <th style="width: 20%">Relationship</th>
+            <th style="width: 10%">Age</th>
+            <th style="width: 20%">Occupation</th>
+            <th style="width: 15%">Monthly Income</th>
+          </tr>
+          <tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+          </tr>
+          <tr>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+            <td><input type="text" /></td>
+          </tr>
+        </table>
+
+        <p>
+          Encl:- Self Declaration Letter (PTO...2)<br />
+          1) Election card copy self-Attested<br />
+          2) Ration card copy self-Attested<br />
+          3) House tax Receipt<br />
+          4) Bank Pass Book copy
+        </p>
+
+        <div class="signature">Signature of the Applicant</div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: SELF DECLARATION FORM -->
+    <div class="page declaration-page">
+      <div class="photo-box">Photo With<br />Cross<br />Signature</div>
+      <div class="header">
+        SELF DECLARATION<br />
+        <small>(For Issue of Income Certificate)</small>
+      </div>
+
+      <div class="form-section">
+        I, Shri./Smt. <input type="text" /> Son/Daughter/Wife of Shri
+        <input type="text" /> Age
+        <input type="text" style="width: 40px" /> Resident of
+        <input type="text" style="width: 300px" /> <br /><br />
+        District South/North Goa.
+      </div>
+
+      <div class="form-section">
+        I, hereby declare that the information given above are in the enclosed
+        documents are true to the best of my knowledge and belief and nothing
+        has been concealed therein. I am well aware of the information given by
+        me is proved false / not true, I will have to face the punishment as per
+        the law, Also the benefits availed by me shall be summarily withdrawn.
+      </div>
+
+      <div class="signature-line">
+        <div>
+          <strong>Date:</strong>
+          <input type="text" style="width: 35px" />/<input
+            type="text"
+            style="width: 35px"
+          />/20<input type="text" style="width: 35px" /><br />
+          <strong>Place:</strong> Chicalim / Dabolim / St. Jacinto
+        </div>
+        <div class="right-signature">
+          <strong>Name & Signature of the applicant</strong><br />
+          <strong>Photo ID Card No:</strong>
+          <input type="text" style="width: 160px" />
+        </div>
+      </div>
+
+      <div class="report-section">
+        <strong>Report</strong>
+        <div class="two-column">
+          <div>
+            The information/details given by the applicant on the application
+            form is inquired through locals/member mentioned below and the
+            family income shown by the applicant is found to be correct i.e. Rs.
+            <input type="text" style="width: 120px" />.<br /><br />
+            The applicant also stated that none of the family member is
+            government servant.
+          </div>
+          <div>
+            <strong>Date:</strong>
+            <input type="text" style="width: 35px" />/<input
+              type="text"
+              style="width: 35px"
+            />/20<input type="text" style="width: 35px" />
+          </div>
+        </div>
+      </div>
+
+      <div class="witness-section">
+        <div class="witness-box">
+          <div>
+            1. <input type="text" style="width: 90%" /><br />
+            R/o <input type="text" style="width: 90%" />
+          </div>
+          <div style="align-self: center">
+            <strong>Signature:</strong>
+            <input type="text" style="width: 160px" />
+          </div>
+        </div>
+
+        <div class="witness-box">
+          <div>
+            2. <input type="text" style="width: 90%" /><br />
+            R/o <input type="text" style="width: 90%" />
+          </div>
+          <div style="align-self: center">
+            <strong>Signature:</strong>
+            <input type="text" style="width: 160px" />
+          </div>
+        </div>
+      </div>
+
+      <div class="applicant-signature">(Applicant Signature)</div>
+    </div>
+  </body>
+</html>
